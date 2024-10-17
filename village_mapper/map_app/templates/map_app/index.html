@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoPulse</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>GeoPulse</h1>
+    </header>
+    <div id="main-container">
+        <div id="filters">
+            <div class="filter-group">
+                <label for="district-select">District</label>
+                <select id="district-select">
+                    <option value="">Select District</option>
+                    {% for district in districts %}
+                        <option value="{{ district }}">{{ district }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="village-select">Village Name</label>
+                <select id="village-select">
+                    <option value="">Select Village</option>
+                </select>
+            </div>
+            <div id="village-checkboxes">
+                <!-- villages checkboxes will be populated here -->
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+       var villagesData = JSON.parse('{{ villages_data|escapejs }}');
+    </script>
+    <script src="/static/js/map.js"></script>
+</body>
+</html>

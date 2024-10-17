@@ -1,0 +1,15 @@
+# Ignore Python bytecode and cache
+*.py[cod]
+__pycache__/
+
+# Ignore virtual environments
+env/
+venv/
+my_env/
+
+# Ignore Django specific files
+db.sqlite3
+*.log
+
+# Ignore settings that may contain sensitive data
+.env

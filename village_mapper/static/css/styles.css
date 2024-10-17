@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#main-container {
+    display: flex;
+    height: calc(100% - 50px);  
+}
+
+#filters {
+    width: 250px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    overflow-y: auto;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+}
+
+#village-checkboxes {
+    margin-top: 15px;
+}
+
+#map {
+    flex-grow: 1;
+}
